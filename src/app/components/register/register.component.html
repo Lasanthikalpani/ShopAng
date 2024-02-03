@@ -1,0 +1,52 @@
+<form [formGroup]="registerForm" #f="ngForm">
+    <p-card header="Register" [style]="{ width:'360px'}">
+       <div class="feild">
+        <label for="fullname">Full Name</label>
+        <input
+        type="text" 
+        pInputText
+        formControlName="fullname"
+        class="w-full"
+        name="fullname"
+        placeholder="type your fullname"
+        />
+       </div>
+       <div class="feild">
+        <label for="email">Email</label>
+        <input
+        type="text" 
+        pInputText
+        formControlName="email"
+        class="w-full"
+        name="email"
+        placeholder="type your email"
+        />
+       </div>
+       <div class="feild">
+        <label for="password">password</label>
+        <input type="password" 
+        pInputText
+        formControlName="password"
+        class="w-full"
+        name="password"
+        placeholder="type your password"
+        />
+       </div>
+       <div class="feild">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="confirmPassword" 
+        pInputText
+        formControlName="confirmPassword"
+        class="w-full"
+        name="confirmPassword"
+        placeholder="type your confirmPassword"
+        />
+       </div>
+       <p></p>
+       <p-button label="SIGN UP" styleClass="w-full" [disabled]="registerForm.invalid"></p-button>
+       <div class="mt-2">
+        Allready a Member?<a routerLink="/login">Login</a>
+
+       </div>
+    </p-card>
+</form>
